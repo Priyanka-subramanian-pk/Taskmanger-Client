@@ -1,6 +1,8 @@
-import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
+
+  const navigate=useNavigate()
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center py-10">
       <div className="bg-white p-8 rounded-lg shadow-lg  mx-auto">
@@ -40,19 +42,17 @@ const LandingPage = () => {
             </p>
           </div>
         </div>
-        <div className="text-center mt-6 ">
-          <a
-            href="/home"
-            className="bg-blue-600 text-white mx-4 py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
-          >
-            View Tasks
-          </a>
-          <a
-            href="/register"
-            className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
-          >
-            Get Started
-          </a>
+        <div className=" flex justify-center text-center mt-6 ">
+        <p onClick={()=>{navigate("/home")}}
+        className="bg-blue-600 text-white mx-4 py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
+        >    View Tasks
+        </p>
+         
+        <p onClick={()=>{navigate("/register")}}
+        className="bg-blue-600 text-white mx-4 py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
+        >      Get Started
+        </p>
+
         </div>
       </div>
     </div>

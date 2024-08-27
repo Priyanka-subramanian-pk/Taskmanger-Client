@@ -1,48 +1,50 @@
-# Task Manager App
+
+
+
+Task Manager App
 A task management application that allows users to create, manage, and organize tasks in various states (To Do, In Progress, Done) with an intuitive drag-and-drop interface.
 
-
-Table of Contents
-
-Features
-Installation
-Usage
-Libraries Used
-Contributing
-License
-Contact
-
-
-Features
-User Registration & Login
+Features:-
+User Registration & Login:
 
 Create an account or log in using Gmail or email and password.
-Task Management
+Task Management:
 
 Add, edit, update, and delete tasks.
 Drag and drop tasks between states: To Do, In Progress, Done.
-Real-time Notifications
+Real-time Notifications:
 
 Get real-time feedback and notifications using React-Toastify.
 
-
-
 Installation
-git clone https://github.com/yourusername/task-manager-app.git
+To set up the project locally, follow these steps:
 
+Clone the repository:
+git clone https://github.com/Priyanka-subramanian-pk/Taskmanger-Client
 Navigate to the project directory:
-cd task-manager-app
-
-stall dependencies:
+cd Taskmanger-Client
+Install dependencies:
 npm install
-
-REACT_APP_FIREBASE_API_KEY=your_api_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-REACT_APP_FIREBASE_APP_ID=your_app_id
+Run the development server:
+npm run dev
 
 
-npm start
+Set up environment variables: Create a .env file in the root of your project and add the following:
 
+VITE_FIREBASE_API_KEY=AIzaSyDps4ukjwcZp2MaxPRhyezIUFqfvj5cHrU
+VITE_FIREBASE_AUTH_DOMAIN=userauth-fa662.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=userauth-fa662
+VITE_FIREBASE_STORAGE_BUCKET=userauth-fa662.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=611744068907
+VITE_FIREBASE_APP_ID=1:611744068907:web:9149e324b91092990c816e
+VITE_FIREBASE_MEASUREMENT_ID=G-
+
+
+Libraries Used:-
+
+Tailwind CSS: Utility-first CSS framework for styling.
+React-Toastify: Notifications for React apps.
+Formik: Form management library.
+Firebase: Backend services for authentication and database.
+React Icons: Icons for React.
+React DnD HTML5 Backend: Drag-and-drop utilities for React.

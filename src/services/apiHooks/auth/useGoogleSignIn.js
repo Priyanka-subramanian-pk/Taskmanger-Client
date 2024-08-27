@@ -1,9 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"; // Import Axios
+import axiosInstance from "../../../api/axios/Axios";
 import { auth, provider } from "../../../utils/firebase/Firebase"
 import { myContext } from "../../../api/contextApi/ContextApi";
+import { toast } from 'react-toastify';
+
 
 export const useGoogleSignin = () => {
   const navigate = useNavigate();
@@ -17,7 +19,7 @@ export const useGoogleSignin = () => {
      
 
       if (uid) {
-        const response = await axios.post("/api/auth/login", { uid });
+        const response = await axiosInstance.post("/api/auth/login", { uid });
 
         if (response.status === 200) {
           

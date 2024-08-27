@@ -1,4 +1,3 @@
-import React from "react";
 import CustomInputField from "../components/inputfield/CustomInputField";
 import Button from "../components/button/Button";
 import { useGlobalFormik } from "../utils/customHooks/formikValidation/useGlobalFormik";

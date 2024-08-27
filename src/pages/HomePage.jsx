@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useContext } from 'react';
+import  { useState, useEffect, useContext } from 'react';
 import Button from '../components/button/Button';
 import Dropdown from '../components/inputfield/Dropdown';
 import useFetchTasks from '../services/apiHooks/taskServices/fetchTasks';
@@ -23,8 +23,8 @@ const HomePage = () => {
 
   const { tasks: fetchedTasks, loading: fetchingLoading, error: fetchingError } = useFetchTasks("/api/tasks");
   
-  const { updateTask, loading: updatingLoading, error: updatingError, success } = useUpdateTask();
-  const { handleDeleteTask, loading, error } = useDeleteTask();
+  const { updateTask, loading: updatingLoading, error: updatingError } = useUpdateTask();
+  const { handleDeleteTask } = useDeleteTask();
 
 
   useEffect(() => {

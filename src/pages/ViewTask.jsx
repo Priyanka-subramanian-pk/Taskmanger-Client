@@ -11,8 +11,8 @@ const ViewTask = () => {
     const navigate = useNavigate();
   
     const [isModalOpen, setIsModalOpen] = useState(true);
-    // const { tasks, loading, error } = useFetchTasks(`/api/tasks/${id}`);
-    const { tasks, loading, error } = useContext(myContext)
+    const { tasks, loading, error } = useFetchTasks(`/api/tasks/${id}`);
+    // const { tasks, loading, error } = useContext(myContext)
 console.log("taskkkkkkkkkkkkkkkkk",tasks);
 
     if (loading) return <p>Loading...</p>;

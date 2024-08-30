@@ -5,8 +5,8 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import HomePage from "../pages/HomePage";
 import AddTask from "../pages/AddTask";
-import ViewTask from "../pages/ViewTask";
 import ProtectedRoute from "../utils/protectedRoutes/ProtectedRoute";
+import ViewTAsks from "../pages/ViewTAsks";
 
 
 export const router = createBrowserRouter([
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
             { path: "/register", element: <RegisterPage /> },
             { path: "/home", element: <ProtectedRoute element={HomePage} /> },
             { path: "/add-tasks", element: <ProtectedRoute element={AddTask} /> },
-            { path: "/view-tasks/:id", element: <ProtectedRoute element={ViewTask} /> },
+            { path: "/view-tasks/:id", element: <ProtectedRoute element={ViewTAsks} /> },
         ],
     },
 ]);

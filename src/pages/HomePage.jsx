@@ -46,7 +46,7 @@ const HomePage = () => {
     
      await updateTask(taskId, { taskStatus: columnId });
     const updatedTasks = [...tasks];
-    console.log("uuuuuuuuuuuuu",updateTask)
+    // console.log("uuuuuuuuuuuuu",updateTask)
     const [removed] = updatedTasks.splice(dragIndex, 1);
     removed.taskStatus = columnId;
     updatedTasks.splice(hoverIndex, 0, removed);
@@ -67,6 +67,8 @@ const HomePage = () => {
   };
 
   const handleViewDetails = (taskId) => {
+    console.log("task id ",taskId);
+    
     navigate(`/view-tasks/${taskId}`)
   };
 

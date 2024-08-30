@@ -13,6 +13,7 @@ const useFetchTasks = (url) => {
        
       try {
         const response = await axiosInstance.get(url);
+       console.log("response.....",response.data);
        
         setTasks(response?.data?.tasks);
       } catch (err) {

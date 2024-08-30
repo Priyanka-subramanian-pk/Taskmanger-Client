@@ -8,7 +8,6 @@ const useAddTask = () => {
   const [success, setSuccess] = useState(false);
 
   const addTask = async (url, newTask) => {
-    console.log("hooooiii")
     setLoading(true);
     setError(null);
     setSuccess(false);

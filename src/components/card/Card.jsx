@@ -15,19 +15,19 @@ const Card = ({ title, description, date, onDelete, onEdit, onViewDetails, taskI
     }),
   });
 
-  const [, drop] = useDrop({
-    accept: ItemType,
-    hover: (item) => {
-      if (item.index !== index) {
-        moveCard(item.index, index);
-        item.index = index;
-      }
-    },
-  });
+  // const [, drop] = useDrop({
+  //   accept: ItemType,
+  //   hover: (item) => {
+  //     if (item.index !== index) {
+  //       moveCard(item.index, index);
+  //       item.index = index;
+  //     }
+  //   },
+  // });
 
   return (
     <div
-      ref={(node) => drag(drop(node))}
+      ref={(node) => drag((node))}
       className={`bg-custom-lightBlue rounded-md p-4 ${isDragging ? 'dragging' : ''}`}
     >
       <h5 className="font-semibold text-lg text-black">{title}</h5>

@@ -12,6 +12,8 @@ export const useGoogleSignup = () => {
     const handleGoogleSignup = async () => {
         try {
             const data = await signInWithPopup(auth, provider);
+            console.log("dataa",data);
+            
             const uid = data?.user?.uid;
 
 
